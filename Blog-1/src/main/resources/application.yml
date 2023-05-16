@@ -1,17 +1,16 @@
 server:
   port: 8005
   servlet:
-    context-path: /blog
+    context-path: /
     encoding:
       charset: UTF-8
-      enabled: true
-      force: true
     
 spring:
-#  mvc:
-#    view:
-#      prefix: /WEB-INF/views/
-#      suffix: .jsp
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+      
       
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -23,14 +22,14 @@ spring:
     open-in-view: true
     hibernate:
     #처음에는 create 해주고 그 후로는 update로 바꿔줘야만 함!! 그래야 db에 들어감!
-      ddl-auto: create
+      ddl-auto: update
       naming:
       #Entity 만들 때 변수명에 언더스코어를 붙여준다. 예) createDate -> create_date
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
         #jpa 기본 전략에 따라가지 않겠다는 뜻
       use-new-id-generator-mappings: false
       #콘솔창에 sql 테이블 생성되는 거 보여줌!
-    show-sql: true
+    #show-sql: true
       #정렬 예쁘게 해주는 애
     properties:
       hibernate.format_sql: true

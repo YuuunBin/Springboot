@@ -40,7 +40,6 @@ public class Board {
 	private String content;
 	
 	//조회수
-	@ColumnDefault("0")
 	private int count;
 	
 	//	누가 적었는지 알기 위해서 
