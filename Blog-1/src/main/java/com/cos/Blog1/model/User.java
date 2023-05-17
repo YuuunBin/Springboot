@@ -33,7 +33,7 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //프로젝트에서 연결된 db의 넘버링 전략을 따라감.
 	private int id; //시퀸스, auto_increment
 	
-	@Column(nullable =false, length=30)
+	@Column(nullable =false, length=100)
 	private String username;
 	
 	// 비번 해쉬로 비밀번호 암호화 할 거라서 넉넉하게 숫자 정해둠
@@ -46,6 +46,8 @@ public class User {
 	@Enumerated(EnumType.STRING)
 	private RoleType role; 
 
+	private String oauth;//카카오, 구글
+	
 	@CreationTimestamp //시간이 자동 입력
 	private Timestamp createDate;  
 }

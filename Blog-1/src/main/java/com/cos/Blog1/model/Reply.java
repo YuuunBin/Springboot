@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor //빈 생성자
 @AllArgsConstructor//전체생성자
 @Builder//빌더 패턴
-class Reply {
+public class Reply {
  
 	@Id //Primary Key
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //프로젝트에서 연결된 db의 넘버링 전략을 따라감.

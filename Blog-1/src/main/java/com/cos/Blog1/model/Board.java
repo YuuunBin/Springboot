@@ -13,9 +13,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -51,7 +54,9 @@ public class Board {
 	//댓글은 한 사람만 쓰는게 아니라서 List를 써야함
 	@OneToMany(mappedBy="board", fetch=FetchType.EAGER) //mappedBy 연관관계의 주인이 아니다. FK가 아니니 DB에 컬럼을 만들지 말라는 뜻 board 를 셀렉할 때 join문을 통해 값을 얻기위해 필요하다는 뜻
 								//mappedBy="board" 에서의 board는 reply 클래스의 필드 이름
-	private List<Reply> reply;
+	@JsonIgnoreProperties({"board"})
+	@OrderBy("id desc") //순서대로 정렬
+	private List<Reply> replys;
 	
 	@CreationTimestamp
 	private Timestamp createDate;
