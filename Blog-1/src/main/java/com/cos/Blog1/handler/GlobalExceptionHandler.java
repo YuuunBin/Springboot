@@ -14,6 +14,6 @@ public class GlobalExceptionHandler {
 	//Illegal Exception만 들어옴. value에 Exception만 있으면 모든 예외 처리를 여기서 함.
 	@ExceptionHandler(value=IllegalArgumentException.class)
 	public ResponseDto<String> handleArgumentExcepton(IllegalArgumentException e) {
-		return new ResponseDto<String>(HttpStatus.INTERNAL_SERVER_ERROR.value(),e.getMessage());
+		return new ResponseDto<String>(HttpStatus.INTERNAL_SERVER_ERROR.value(),e.getMessage()); //500 에러
 	}
 }

@@ -6,7 +6,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
 	<div class="jumbotron text-center" style="margin-bottom: 0">
 		<p>Created by YunBin</p>
 		<p>010-000-000</p>
