@@ -40,3 +40,8 @@ spring:
 
 cos:
   key: cos1234
+  
+naver:
+  client:
+    X-Naver-Client-Id: qyeZi3a6uX9XPcGjiwjg
+    X-Naver-Client-Secret: vtDKicWs9m

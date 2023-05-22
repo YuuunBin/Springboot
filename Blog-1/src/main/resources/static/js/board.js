@@ -20,6 +20,7 @@ let index = {
 					content: $("#content").val()
 			};
 			
+			//비동기 자바스크립트와 XML을 활용하여 빠르게 동작하는 웹 페이지를 만드는 개발 기법
 			$.ajax({ 
 				type: "POST",
 				url: "/api/board",
