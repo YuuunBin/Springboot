@@ -9,7 +9,7 @@
 <body>
     <h1>News Search Results</h1>
     <table>
-        <tr>
+        <tr> 
             <th>Title</th>
             <th>Description</th>
             <th>Link</th>
