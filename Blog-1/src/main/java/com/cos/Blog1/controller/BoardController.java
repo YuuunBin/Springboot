@@ -19,6 +19,8 @@ public class BoardController {
 	@Autowired
 	private BoardService boardService;
 	
+	
+	
 	@GetMapping({"","/"})
 	//스프링에서 데이터 가져갈 땐 model이 필요함
 	public String index(Model model, @PageableDefault(size = 3, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
@@ -42,4 +44,6 @@ public class BoardController {
 	public String saveForm() {
 		return "board/saveForm";
 	}
+	
+
 }

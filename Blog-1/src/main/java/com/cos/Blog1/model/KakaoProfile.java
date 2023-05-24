@@ -2,9 +2,7 @@
 package com.cos.Blog1.model;
 
 import javax.annotation.Generated;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import lombok.Data;
 
 @Data
